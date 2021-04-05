@@ -1,15 +1,13 @@
-//Variables
-
 const keys = document.querySelector('qwerty');
 let missed = 0;
-const startButton = document.querySelector('btn__reset');
+const startButton = document.querySelector('a.btn__reset');
 const overlay = document.getElementById('overlay');
-
+const ul = document.querySelector('#phrase ul');
 
 // Remove Overlay to Start to Game
 
-startButton.addEventListener('click', e => {
-  document.querySelector('overlay').style.display='none';
+startButton.addEventListener("click", () => {
+  overlay.style.display = "none";
 });
 
 //Array and Return random phrase
@@ -23,7 +21,7 @@ const phrases = [
 
 function getRandomPhraseAsArray (array){
   const randomLetters = Math.floor( Math.random() * array.length);
-  return array[RandomLetters];
+  return array[randomLetters];
 }
 
 //Add Phrase to Display
@@ -40,8 +38,8 @@ function addPhraseToDisplay (RandomLetters) {
   }
  }
 };
-
-addPhraseToDisplay(RandomLetters)
+const phraseArray = getRandomPhraseAsArray(phrases);
+addPhraseToDisplay(phraseArray);
 
 // Check if Letter is Correct
 
