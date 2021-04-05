@@ -1,8 +1,11 @@
-const keys = document.querySelector('qwerty');
+//Variables
+
+const keys = document.querySelector('#qwerty');
 let missed = 0;
 const startButton = document.querySelector('a.btn__reset');
 const overlay = document.getElementById('overlay');
 const ul = document.querySelector('#phrase ul');
+const lives = document.querySelectorAll('.tries img');
 
 // Remove Overlay to Start to Game
 
@@ -47,7 +50,7 @@ function checkLetter (clicked) {
   const checkLetter = document.querySelectorAll('li');
   let matching = null;
   
-  for ( let i=0; i < CheckLetter.length; i++){
+  for ( let i=0; i < checkLetter.length; i++){
     const letters = checkLetter[i];
   if ( letters.textContent === clicked.textContent){
     letters.classList.add('show');
@@ -91,4 +94,6 @@ function checkWin(){
   }
 }
     
+      
+  
       
