@@ -6,7 +6,6 @@ const startButton = document.querySelector('a.btn__reset');
 const overlay = document.getElementById('overlay');
 const ul = document.querySelector('#phrase ul');
 const lives = document.querySelectorAll('.tries img');
-
 // Remove Overlay to Start to Game
 
 startButton.addEventListener("click", () => {
@@ -84,9 +83,10 @@ function checkWin(){
   const show = document.getElementsByClassName('show');
   if (letter.length === show.length){
     overlay.style.display = 'flex';
-    overlay.className = 'win';
-    overlay.firstChild.textContent = 'Replay Game?'
-  }if (missed > 4){
+    overlay.classList = 'win';
+    overlay.firstChild.textContent = 'You won! Congrats!'
+    StartButton.textContent = 'Replay Game?'
+  }else if (missed > 4){
     overlay.classList = 'lose';
     overlay.style.display = 'flex';
     overlay.firstChild.textContent = 'You have lost! Sorry, next time!'
@@ -95,5 +95,6 @@ function checkWin(){
 }
     
       
+
   
       
