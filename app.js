@@ -6,6 +6,7 @@ const startButton = document.querySelector('a.btn__reset');
 const overlay = document.getElementById('overlay');
 const ul = document.querySelector('#phrase ul');
 const lives = document.querySelectorAll('.tries img');
+
 // Remove Overlay to Start to Game
 
 startButton.addEventListener("click", () => {
@@ -33,7 +34,7 @@ function addPhraseToDisplay (RandomLetters) {
     const li = document.createElement('li');
     li.textContent = RandomLetters[i];
     ul.appendChild(li);
-    if (li.textContent === ''){
+    if (li.textContent === ' '){
       li.className = 'space';
     } else {
       li.className = 'letter';
@@ -94,7 +95,4 @@ function checkWin(){
   }
 }
     
-      
-
-  
       
